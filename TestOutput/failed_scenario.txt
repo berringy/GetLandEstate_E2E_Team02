@@ -1,5 +1,5 @@
-<<<<<<< HEAD
-file:src/test/resources/features/ui_features/US06_TC01.feature:29:38:46:54:62:70:79:88:97:106:114:123:131:140:148:156:165:174:181
-=======
+file:src/test/resources/features/ui_features/US04_UI.feature:45
+file:src/test/resources/features/ui_features/US06_TC01.feature:29:38:46:54:62:70:79:88:97:106:114:123:131:140:148:156:165:174:18
 file:src/test/resources/features/ui_features/US19_UI_ContactForm.feature:15
->>>>>>> f473797d6fea45b4d55cd56ab01a9dd9a4c09cc0
+ f473797d6fea45b4d55cd56ab01a9dd9a4c09cc0
+
