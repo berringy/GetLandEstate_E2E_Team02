@@ -12,8 +12,8 @@ import org.junit.runner.RunWith;
                 "junit:target/xml-report/cucumber.xml"
         },
         features = "src/test/resources/features",
-        glue = {"techproed/stepdefs"},
-        tags = "@e2e",
+        glue = {"getland/stepdefs/ui_stepdefs/us01_stepdefs"},
+        tags = "@UIUS01",
         dryRun = false
 )
 public class Runner {
