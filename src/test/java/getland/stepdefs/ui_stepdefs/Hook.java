@@ -1,12 +1,15 @@
+<<<<<<< HEAD:src/test/java/getland/stepdefs/ui_stepdefs/Hook.java
 package getland.stepdefs.ui_stepdefs;
+=======
+
+package getland.utilities;
+>>>>>>> 4d335517c8846cd71db02b646bece95f9d2c3558:src/test/java/getland/stepdefs/Hook.java
 
 
 import io.cucumber.java.Before;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
-import getland.utilities.Authentication;
-import getland.utilities.ConfigReader;
 
 public class Hook {
 
