@@ -1,20 +1,22 @@
 package getland.runners;
+
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 
-@RunWith(Cucumber.class)//Cucumber ile junitin entegre olmasini ve scenariolarin calistirilmasini saglayan notasyon
-@CucumberOptions(//bu notasyon sayesinde hangi scenariolari calistiracagimizi ve hangi raporlari alacagimizi belirtiriz
-        plugin = {
-                "pretty",//konsol da scenariolar ile ilgili ayrintili bilgi verir
-                "html:target/default-cucumber-reports.html",
-                "json:target/json-reports/cucumber.json",
-                "junit:target/xml-report/cucumber.xml"
-        },
+@RunWith(Cucumber.class)
+@CucumberOptions(
         features = "src/test/resources/features",
-        glue = {"techproed/stepdefs"},
-        tags = "@e2e",
+        glue = {"getland/stepdefs/ui_stepdefs", "getland/hooks"}, // Hooks burada ekli
+        plugin = {
+                "pretty",
+                "html:target/cucumber-reports.html",
+                "json:target/cucumber.json",
+                "rerun:target/rerun.txt"  // Fail olan testleri tekrar çalıştırmak için kaydet
+        },
+        monochrome = true,
+        tags = "@US007",  // Feature dosyasında senaryolara "@US006" etiketi eklenmeli
         dryRun = false
 )
-public class Runner {
+public class Runner{
 }

@@ -5,8 +5,6 @@ import io.cucumber.java.Before;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
-import getland.utilities.Authentication;
-import getland.utilities.ConfigReader;
 
 public class Hook {
 
