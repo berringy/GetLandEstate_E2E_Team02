@@ -1,13 +1,16 @@
+package getland.stepdefs.ui_stepdefs.us01_stepdefs;
 
-package getland.utilities;
 
-
+import getland.utilities.Authentication;
+import getland.utilities.ConfigReader;
+import getland.utilities.Driver;
+import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
 
-public class Hook {
+public class HookUS_01 {
 
     /*
     Hooks classinda @api tagi ile api testlerine özel bir before method olusturduk
@@ -15,16 +18,10 @@ public class Hook {
      @Before("@apie2e") yazdigimizda artik sadece @apie2e tagina sahip olan scenariolar
      icin özellestirdik
      */
-    public static RequestSpecification spec;
 
-    @Before("@apie2e")
-    public void setUp() throws Exception {
-        spec = new RequestSpecBuilder()
-                .setBaseUri(ConfigReader.getProperty("baseUrl"))
-                .setContentType(ContentType.JSON)
-                .addHeader("Authorization", "Bearer " + Authentication.generateToken())
-                .build();
+    @After("@UIUS01")
+    public void tearDown() {
+        Driver.closeDriver();
     }
-
 
 }
