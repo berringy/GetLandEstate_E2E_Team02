@@ -1,4 +1,4 @@
-package getland.stepdefs;
+package getland.stepdefs.ui_stepdefs.us15_stepdefs;
 
 import getland.pages.US15Page;
 import getland.utilities.ConfigReader;

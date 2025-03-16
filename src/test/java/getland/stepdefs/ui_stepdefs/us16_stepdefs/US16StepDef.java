@@ -1,4 +1,4 @@
-package getland.stepdefs;
+package getland.stepdefs.ui_stepdefs.us16_stepdefs;
 
 import getland.pages.US16Page;
 import getland.utilities.ReusableMethods;
