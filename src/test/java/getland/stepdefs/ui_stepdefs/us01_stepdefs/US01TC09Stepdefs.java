@@ -4,7 +4,7 @@ import getland.pages.GetlandEstateRegisterPage;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 
-public class Us01TC09Stepdefs {
+public class US01TC09Stepdefs {
 
     GetlandEstateRegisterPage getlandEstateRegisterPage = new GetlandEstateRegisterPage();
 
