@@ -304,5 +304,7 @@ public class BrowserUtils {
     public static void windowSwitchTo(int windowIndex) {
         List<String> list = new ArrayList<>(Driver.getDriver().getWindowHandles());
         Driver.getDriver().switchTo().window(list.get(windowIndex));
+
+
     }
 }

@@ -1,4 +1,4 @@
-package getland.utilities;
+package getland.stepdefs;
 
 
 import io.cucumber.java.Before;
