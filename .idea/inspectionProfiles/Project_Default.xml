@@ -1,13 +1,28 @@
 <component name="InspectionProjectProfileManager">
   <profile version="1.0">
     <option name="myName" value="Project Default" />
-    <inspection_tool class="PublicField" enabled="true" level="INFORMATION" enabled_by_default="true">
-      <option name="ignoreEnums" value="false" />
-      <option name="ignorableAnnotations">
-        <value>
-          <item value="org.junit.runners.Parameterized.Parameter" />
-          <item value="org.openqa.selenium.support.FindBy" />
-        </value>
+    <inspection_tool class="VulnerableLibrariesLocal" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="isIgnoringEnabled" value="true" />
+      <option name="ignoredModules">
+        <list>
+          <option value="GetLandEstate" />
+          <option value="GetLandEstate" />
+          <option value="GetLandEstate" />
+        </list>
+      </option>
+      <option name="ignoredPackages">
+        <list>
+          <option value="org.apache.commons:commons-compress:1.21" />
+          <option value="commons-io:commons-io:2.11.0" />
+          <option value="org.yaml:snakeyaml:1.23" />
+        </list>
+      </option>
+      <option name="ignoredReasons">
+        <list>
+          <option value="Not exploitable" />
+          <option value="Not exploitable" />
+          <option value="Not exploitable" />
+        </list>
       </option>
     </inspection_tool>
   </profile>
