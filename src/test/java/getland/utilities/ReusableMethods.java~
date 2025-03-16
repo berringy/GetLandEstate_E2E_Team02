@@ -173,7 +173,6 @@ public class ReusableMethods {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-
     }
 
     public ReusableMethods(){
@@ -198,5 +197,10 @@ public class ReusableMethods {
         }
     }
 
+    public static void AssertGetValue(WebElement webElement, String expected) {
 
+        String actualValue = webElement.getAttribute("value");
+        System.out.printf(actualValue);
+        Assert.assertTrue(actualValue.equals(expected));
+    }
 }
