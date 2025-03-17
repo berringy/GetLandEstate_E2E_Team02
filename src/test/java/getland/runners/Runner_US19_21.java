@@ -11,7 +11,6 @@ import io.cucumber.junit.CucumberOptions;
                 "html:target/default-cucumber-report.html",
                 "json:target/json-reports/cucumber.json",
                 "junit:target/xml-reports/cucumber.xml",
-                "rerun:TestOutput/failed_scenario.txt"
         },
         features = "src/test/resources/features/ui_features/",
         glue = {"getland/stepdefs/ui_stepdefs/us19_stepdefs","getland/stepdefs/ui_stepdefs/us21_stepdefs"},
