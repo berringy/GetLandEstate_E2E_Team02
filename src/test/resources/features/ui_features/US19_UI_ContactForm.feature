@@ -7,7 +7,7 @@ Feature: Contact Form Functionality
     When User enters valid "Techpro" in the First Name field
     And User enters valid "Education" in the Last Name field
     And User enters valid "techpro@education.com" in the Email field
-    And User enters a message "Bu bir test mesajıdır."
+    And User enters a message "Bu bir TEST mesajıdır."
     And User clicks on the Send button
     Then User should see a confirmation message "Mesaj başarıyla gönderildi."
 
