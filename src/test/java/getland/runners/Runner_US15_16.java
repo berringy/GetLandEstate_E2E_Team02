@@ -1,8 +1,8 @@
 package getland.runners;
 
-import org.junit.runner.RunWith;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
+import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
@@ -14,9 +14,10 @@ import io.cucumber.junit.CucumberOptions;
                 "rerun:TestOutput/failed_scenario.txt"
         },
         features = "src/test/resources/features/ui_features/",
-        glue = {"getland/stepdefs/ui_stepdefs/us19_stepdefs","getland/stepdefs/ui_stepdefs/us21_stepdefs"},
-        tags = "@US19 or @US21",
+        glue = {"getland/stepdefs/ui_stepdefs/us15_stepdefs","getland/stepdefs/ui_stepdefs/us16_stepdefs"},
+        tags = "@US15 or @US16",
+        monochrome = false,
         dryRun = false
 )
-public class Runner_US19_21 {
+public class Runner_US15_16 {
 }
