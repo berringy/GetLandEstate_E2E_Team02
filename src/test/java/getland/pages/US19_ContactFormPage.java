@@ -14,6 +14,9 @@ public class US19_ContactFormPage {
         PageFactory.initElements(driver, this);
     }
 
+    @FindBy(xpath = "//iframe[contains(@src,'google.com/maps/embed')]")
+    public  WebElement iframeField;
+
     @FindBy(xpath = "//input[@id='firstName']")
     public  WebElement firstNameField;
 

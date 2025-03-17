@@ -28,9 +28,9 @@ public class US21TC05StepDefs {
 
     @And("User selects message status {string}")
     public void userSelectsMessageStatus(String status) {
-        WaitUtils.waitFor(1);
         Select statusDropdown = new Select(messageDisplayPage.selectMessageStatus);
         statusDropdown.selectByVisibleText(status);
+        WaitUtils.waitFor(1);
     }
 
     @And("User clicks on the Apply button")
