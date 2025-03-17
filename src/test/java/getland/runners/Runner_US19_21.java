@@ -16,7 +16,6 @@ import io.cucumber.junit.CucumberOptions;
         features = "src/test/resources/features/ui_features/",
         glue = {"getland/stepdefs/ui_stepdefs/us19_stepdefs","getland/stepdefs/ui_stepdefs/us21_stepdefs"},
         tags = "@US19 or @US21",
-        monochrome = false,
         dryRun = false
 )
 public class Runner_US19_21 {

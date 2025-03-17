@@ -14,7 +14,7 @@ public class US21TC03StepDefs {
         messageDisplayPage.markAsReadIcon.click();
         WaitUtils.waitFor(1);
         messageDisplayPage.markAsUnreadIcon.click();
-        WaitUtils.waitFor(2);
+        WaitUtils.waitFor(1);
 
     }
 }

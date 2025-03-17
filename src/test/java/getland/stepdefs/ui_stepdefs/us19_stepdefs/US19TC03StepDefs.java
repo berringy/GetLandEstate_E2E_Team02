@@ -13,8 +13,9 @@ public class US19TC03StepDefs {
 
     @When("User enters {string} in the First Name field")
     public void userEntersInTheFirstNameField(String firstName) {
-        //ActionsUtils.dragAndDropBy(contactFormPage.sendButton,350,10);
+
         ReusableMethods.waitForSecond(1);
+        ReusableMethods.scroll(contactFormPage.sendButton);
         contactFormPage.firstNameField.sendKeys(firstName);
         contactFormPage.lastNameField.click();
         Assert.assertTrue("Ad alanı 2 karakterden az olmamalı!", firstName.length() < 2);
