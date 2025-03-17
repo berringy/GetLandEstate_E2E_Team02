@@ -1,6 +1,6 @@
 package getland.stepdefs.ui_stepdefs.us04_stepdefs;
 
-import getland.pages.Us04_Pages;
+import getland.pages.Us04_Page;
 import getland.utilities.Driver;
 import getland.utilities.JSUtils;
 import getland.utilities.WaitUtils;
@@ -8,12 +8,11 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import net.bytebuddy.asm.Advice;
 import org.junit.Assert;
 
 public class Us04_Stepdefs {
 
-    Us04_Pages us04Pages=new Us04_Pages();
+    Us04_Page us04Pages=new Us04_Page();
     @Given("Ana sayfayı aç")
     public void anaSayfayıAç() {
 
