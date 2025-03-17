@@ -150,8 +150,9 @@ public class ReusableMethods {
      * Bu method verilen weblementin ekran görüntüsünü alir ve rapora ekler
      *
      * @param webelement
+     * @param customerisim
      */
-    public static void takeScreenShotOfWebElement(WebElement webelement) {
+    public static void takeScreenShotOfWebElement(WebElement webelement, WebElement customerisim) {
         try {
             Files.createDirectories(Paths.get("testOutputs"));
             String date = DateTimeFormatter.ofPattern("ddMMyyyy_HHmmss").format(LocalDateTime.now());

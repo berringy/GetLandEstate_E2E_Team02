@@ -28,16 +28,16 @@ Feature: Displaying Contact Messages
   @US21TC04
   Scenario: User should be search for a message by keyword
     Given User is on the same page
-    When User enters "test" into the search box
+    When User enters "TEST" into the search box
     And User clicks the search button
     And User clicks on the message
-    Then Messages containing "test" should be displayed
+    Then Messages containing "TEST" should be displayed
 
 
   @US21TC05
   Scenario: User should be search for a message by keyword
     Given User is on the same page
-    When User enters "test" into the search box
+    When User enters "TEST" into the search box
     And User clicks the filter button
     And User selects start date "11.03.2025"
     And User selects end date "17.03.2025"
@@ -53,7 +53,7 @@ Feature: Displaying Contact Messages
     And User clicks on the Apply button
     And User clicks the search button
     And User clicks on the message
-    Then Messages containing "test" should be displayed
+    Then Messages containing "TEST" should be displayed
     And User closes the browser
 
 
