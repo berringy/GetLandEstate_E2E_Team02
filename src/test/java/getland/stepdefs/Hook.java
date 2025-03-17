@@ -1,12 +1,18 @@
 package getland.utilities;
 
 
+import io.cucumber.java.After;
+import io.cucumber.java.AfterAll;
 import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
 import getland.utilities.Authentication;
 import getland.utilities.ConfigReader;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 
 public class Hook {
 
@@ -16,6 +22,8 @@ public class Hook {
      @Before("@apie2e") yazdigimizda artik sadece @apie2e tagina sahip olan scenariolar
      icin özellestirdik
      */
+
+    private WebDriver driver;
     public static RequestSpecification spec;
 
     @Before("@apie2e")
@@ -26,6 +34,7 @@ public class Hook {
                 .addHeader("Authorization", "Bearer " + Authentication.generateToken())
                 .build();
     }
-
-
 }
+
+
+
