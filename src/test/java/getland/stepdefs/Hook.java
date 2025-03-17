@@ -9,7 +9,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
 
-public class Hooks {
+public class Hook {
 
     @Before
     public void setup() {
