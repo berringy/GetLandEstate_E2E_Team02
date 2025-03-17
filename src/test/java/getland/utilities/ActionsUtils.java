@@ -1,11 +1,12 @@
 package getland.utilities;
 
+import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
 public class ActionsUtils {
-    private static Actions actions = new Actions(Driver.getDriver());
+    public static Actions actions = new Actions(Driver.getDriver());
 
     /**
      * Belirtilen element üzerinde sağ tıklama (context click) işlemi yapar.
@@ -103,4 +104,6 @@ public class ActionsUtils {
     public static void pressTab() {
         actions.sendKeys(Keys.TAB).build().perform();
     }
+
+
 }
