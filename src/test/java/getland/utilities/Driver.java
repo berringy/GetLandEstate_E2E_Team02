@@ -60,3 +60,4 @@ izolasyon ve thread safe saglanmis olur
             driverPool.remove(); // ThreadLocal'daki referansı temizliyoruz.
         }
     }
+}

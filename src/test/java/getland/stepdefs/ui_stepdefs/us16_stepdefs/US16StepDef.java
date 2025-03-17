@@ -1,8 +1,4 @@
-<<<<<<<< HEAD:src/test/java/getland/stepdefs/ui_stepdefs/US16StepDef.java
-package getland.stepdefs.ui_stepdefs;
-========
 package getland.stepdefs.ui_stepdefs.us16_stepdefs;
->>>>>>>> 8242723139655210ceb654ae0ba977f286329842:src/test/java/getland/stepdefs/ui_stepdefs/us16_stepdefs/US16StepDef.java
 
 import getland.pages.US16Page;
 import getland.utilities.ReusableMethods;
