@@ -24,6 +24,7 @@ public class US01TC11Stepdefs {
         getlandEstateRegisterPage.firstName.click();
         ReusableMethods.waitForSecond(2);
         ReusableMethods.takeScreenShot();
+        ReusableMethods.addScreenShotToReport();
     }
 
     @Then("Verify that the error message Last Name is required is displayed")

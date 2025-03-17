@@ -9,7 +9,7 @@ import org.junit.Assert;
 
 public class US01TC03Stepdefs {
     GetlandEstateRegisterPage getlandEstateRegisterPage = new GetlandEstateRegisterPage();
-    ReusableMethods reusableMethods = new ReusableMethods();
+
 
     @And("Enters the invalid email in the email field")
     public void entersTheInvalidEmailInTheEmailField() {
@@ -20,7 +20,8 @@ public class US01TC03Stepdefs {
     public void clickPasswordField() {
         getlandEstateRegisterPage.password.click();
 
-        reusableMethods.takeScreenShot();
+        ReusableMethods.takeScreenShot();
+        ReusableMethods.addScreenShotToReport();
 
 
     }

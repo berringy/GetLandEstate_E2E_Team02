@@ -23,6 +23,7 @@ public class US01TC10Stepdefs {
     public void clickTheLastNameField()  {
         getlandEstateRegisterPage.lastName.click();
         ReusableMethods.takeScreenShot();
+        ReusableMethods.addScreenShotToReport();
 
     }
 
