@@ -1,8 +1,4 @@
-<<<<<<<< HEAD:src/test/java/getland/stepdefs/ui_stepdefs/US15StepDef.java
-package getland.stepdefs.ui_stepdefs;
-========
 package getland.stepdefs.ui_stepdefs.us15_stepdefs;
->>>>>>>> 8242723139655210ceb654ae0ba977f286329842:src/test/java/getland/stepdefs/ui_stepdefs/us15_stepdefs/US15StepDef.java
 
 import getland.pages.US15Page;
 import getland.utilities.ConfigReader;
