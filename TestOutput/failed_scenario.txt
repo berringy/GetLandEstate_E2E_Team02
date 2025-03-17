@@ -1,1 +1,2 @@
-file:src/test/resources/features/ui_features/US19_UI_ContactForm.feature:15
+file:src/test/resources/features/ui_features/US15.feature:10:20:30:37:48:58
+file:src/test/resources/features/ui_features/US16.feature:5:16:27:37
