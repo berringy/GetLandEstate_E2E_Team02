@@ -59,4 +59,9 @@ izolasyon ve thread safe saglanmis olur
             driverPool.get().quit();
             driverPool.remove(); // ThreadLocal'daki referansı temizliyoruz.
         }
-    }}
+    }
+
+    public static WebDriver getDriver(String baseUrl) {
+        return null;
+    }
+}
