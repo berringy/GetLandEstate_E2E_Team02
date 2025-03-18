@@ -1,8 +1,14 @@
 package getland.utilities;
+import org.junit.Assert;
 import org.openqa.selenium.*;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.awt.*;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -144,8 +150,9 @@ public class ReusableMethods {
      * Bu method verilen weblementin ekran görüntüsünü alir ve rapora ekler
      *
      * @param webelement
+     * @param customerisim
      */
-    public static void takeScreenShotOfWebElement(WebElement webelement) {
+    public static void takeScreenShotOfWebElement(WebElement webelement, WebElement customerisim) {
         try {
             Files.createDirectories(Paths.get("testOutputs"));
             String date = DateTimeFormatter.ofPattern("ddMMyyyy_HHmmss").format(LocalDateTime.now());
@@ -167,5 +174,30 @@ public class ReusableMethods {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+
     }
+
+    public ReusableMethods(){
+        PageFactory.initElements(Driver.getDriver(),this);
+    }
+    //File Upload Robot Class
+    public static void uploadFile(String pathOfTheFile) {
+        try {
+            WaitUtils.waitFor(3);
+            StringSelection stringSelection = new StringSelection(pathOfTheFile);
+            Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
+            Robot robot = new Robot();
+            robot.keyPress(KeyEvent.VK_CONTROL);
+            robot.keyPress(KeyEvent.VK_V);
+            robot.keyRelease(KeyEvent.VK_CONTROL);
+            robot.keyRelease(KeyEvent.VK_V);
+            robot.delay(3000);
+            robot.keyPress(KeyEvent.VK_ENTER);
+            robot.keyRelease(KeyEvent.VK_ENTER);
+            robot.delay(3000);
+        } catch (Exception ignored) {
+        }
+    }
+
+
 }
