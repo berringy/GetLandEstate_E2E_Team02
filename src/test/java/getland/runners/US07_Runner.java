@@ -5,15 +5,15 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "src/test/resources/features",
-        glue = {"getland/stepdefs/ui_stepdefs", "getland/hooks"}, 
+        glue = {"getland/stepdefs/ui_stepdefs", "getland/hooks"},
         plugin = {
                 "pretty",
                 "html:target/cucumber-reports.html",
                 "json:target/cucumber.json",
-                "rerun:target/rerun.txt"  // 
+                "rerun:target/rerun.txt"
         },
         monochrome = true,
-        tags = "@US007",  
+        tags = "@US007",
         dryRun = false
 )
 public class US07_Runner {
