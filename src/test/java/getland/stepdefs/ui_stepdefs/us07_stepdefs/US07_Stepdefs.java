@@ -1,6 +1,5 @@
-package getland.stepdefs.ui_stepdefs;
+package getland.stepdefs.ui_stepdefs.us07_stepdefs;
 
-import getland.pages.US07_Page;
 import getland.pages.US07_Page;
 import getland.utilities.*;
 import io.cucumber.java.en.And;
@@ -8,11 +7,13 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.OutputType;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
 
-import java.io.File;
+import java.time.Duration;
 
 import static getland.utilities.BrowserUtils.*;
+
 
 
 public class US07_Stepdefs {
@@ -23,7 +24,7 @@ public class US07_Stepdefs {
     US07_Page us07Page = new US07_Page();
 
     //TC01
-    @Given("Manager Sayfasina Gider")
+    @Given("Manager Sayfasina Gider.")
     public void manager_sayfasina_gider() {
         Driver.getDriver().get(ConfigReader.getProperty("baseUrl"));
         WaitUtils.waitForPageToLoad(5);
@@ -34,19 +35,36 @@ public class US07_Stepdefs {
         us07Page.backToSiteButton.click();
     }
 
-    @When("Ilan ekle butonuna tiklar")
+    @When("Ilan ekle butonuna tiklar.")
     public void ilan_ekle_butonuna_tiklar() {
         us07Page.createPropertyButton.click();
     }
 
-    @Then("Tüm bilgiler doldurur")
+    @Then("Tüm bilgiler doldurur.")
     public void tümBilgilerDoldurulur() throws InterruptedException {
         us07Page.titleTextBox.sendKeys("Mustakil bahceli Ev");
         us07Page.descriptionTextBox.sendKeys("Mustakil bahceli, merkezi isitma ve klimali ev");
         us07Page.priceTextBox.clear();
         us07Page.priceTextBox.sendKeys("10.000.000");
         Thread.sleep(2000);
-        dropdownSelectByVisibleText(us07Page.advertTypeDropdown, "Sale");
+        boolean selected = false;
+        int attempt = 0;
+
+        while (!selected && attempt < 2) { // En fazla 2 deneme yap
+            try {
+                Select dropdown = new Select(us07Page.advertTypeDropdown);
+                dropdown.selectByVisibleText("Sale"); // "Sale" seç
+                selected = true; // Başarılı olursa döngüden çık
+            } catch (Exception e) {
+                System.out.println("Dropdown seçilemedi, tekrar deneniyor... (Deneme: " + (attempt + 1) + ")");
+                attempt++;
+                try {
+                    Thread.sleep(1000); // 1 saniye bekleyip tekrar dene
+                } catch (InterruptedException ie) {
+                    ie.printStackTrace();
+                }
+            }
+        }
         Thread.sleep(1000);
         dropdownSelectByVisibleText(us07Page.categoryDropdown, "House");
         Thread.sleep(1000);
@@ -82,24 +100,24 @@ public class US07_Stepdefs {
         reusableMethods.uploadFile(pathOfFile1);
     }
 
-    @Then("Create butonuna tiklanir")
+    @Then("Create butonuna tiklanir.")
     public void createButonunaTiklanir() {
         us07Page.createButton.click();
     }
 
-    @Then("Create butonuna tiklanildiginda ilan olusturulur")
+    @Then("Create butonuna tiklanildiginda ilan olusturulur.")
     public void CreateButonunaTiklanildigindaIlanOlusturulur() {
         WaitUtils.waitForPageToLoad(5);
         verifyElementDisplayed(us07Page.advertCheck);
     }
 
-    @And("Sayfayi kapat")
+    @And("Sayfayi kapat.")
     public void sayfayiKapat() {
         Driver.closeDriver();
         WaitUtils.waitForPageToLoad(5);
     }
 
-    @Then("Title alani bos birakilarak diger alanlar doldurulur")
+    @Then("Title alani bos birakilarak diger alanlar doldurulur.")
     public void title_alani_bos_birakilarak_diger_alanlar_doldurulur() throws InterruptedException {
         us07Page.titleTextBox.click();
         us07Page.descriptionTextBox.sendKeys("Mustakil bahceli, merkezi isitma ve klimali ev");
@@ -142,7 +160,7 @@ public class US07_Stepdefs {
         reusableMethods.uploadFile(pathOfFile1);
     }
 
-    @Then("Enter Title alani bos birakildiginda uyari mesaji gorulur")
+    @Then("Enter Title alani bos birakildiginda uyari mesaji gorulur.")
     public void enter_title_bos_birakildiginda_uyari_mesaji_gorulur() {
 
         verifyElementDisplayed(us07Page.alertTitle);
@@ -150,7 +168,7 @@ public class US07_Stepdefs {
 
     }
 
-    @Then("Description alani bos birakilarak diger alanlar doldurulur")
+    @Then("Description alani bos birakilarak diger alanlar doldurulur.")
     public void description_alani_bos_birakilarak_diger_alanlar_doldurulur() throws InterruptedException {
         us07Page.titleTextBox.sendKeys("Mustakil bahceli Ev");
         us07Page.descriptionTextBox.click();
@@ -193,14 +211,14 @@ public class US07_Stepdefs {
         reusableMethods.uploadFile(pathOfFile1);
     }
 
-    @Then("Description alani bos birakildiginda uyari mesaji gorulur")
+    @Then("Description alani bos birakildiginda uyari mesaji gorulur.")
     public void Description_alani_bos_birakildiginda_uyari_mesaji_gorulur() {
 
         verifyElementDisplayed(us07Page.alertDescription);
         verifyExpectedAndActualTextMatch("Enter a description", us07Page.alertDescription);
     }
 
-    @When("Address alani bos birakilmali")
+    @When("Address alani bos birakilmali.")
     public void addressAlaniBosBirakilmali() throws InterruptedException {
         us07Page.titleTextBox.sendKeys("Mustakil bahceli Ev");
         us07Page.descriptionTextBox.sendKeys("Mustakil bahceli, merkezi isitma ve klimali ev");
@@ -243,13 +261,13 @@ public class US07_Stepdefs {
         reusableMethods.uploadFile(pathOfFile1);
     }
 
-    @Then("Address alani bos birakildiginda uyari mesaji gorulur")
+    @Then("Address alani bos birakildiginda uyari mesaji gorulur.")
     public void addressAlaniBosBirakildigindaUyariMesajiGorulur() {
         verifyElementDisplayed(us07Page.alertAdrress);
         verifyExpectedAndActualTextMatch("newAdvertPageTranslations.requiredAddress", us07Page.alertAdrress);
     }
 
-    @When("Resim Ekle butonuna tiklar")
+    @When("Resim Ekle butonuna tiklar.")
     public void resimEkleButonunaTiklar() {
         us07Page.imageClick.click();
     }
@@ -265,18 +283,18 @@ public class US07_Stepdefs {
         Assert.assertTrue(us07Page.truePicture.isDisplayed());
     }
 
-    @When("{int} MB'tan büyük resim yüklendi")
+    @When("{int} MB'tan büyük resim yüklendi.")
     public void mbTanBüyükResimYüklendi(int arg0) {
         String pathOfFile1 = System.getProperty("user.dir") + "\\src\\test\\resources\\testdata\\EV.jpg\\";
         reusableMethods.uploadFile(pathOfFile1);
     }
 
-    @Then("Resim Ekleme - {int} MB'tan büyük resim yüklenemedigi uyari mesaji gorulur")
+    @Then("Resim Ekleme - {int} MB'tan büyük resim yüklenemedigi uyari mesaji gorulur.")
     public void resimEklemeMBTanBüyükResimYüklenemedigiUyariMesajiGorulur(int arg0) {
         Assert.assertTrue(us07Page.alertPictureSize.isDisplayed());
     }
 
-    @Then("Price alanına deger gir diğer alanları doldur.")
+    @Then("Price alanına deger gir diğer alanları doldur..")
     public void priceAlanınaDegerGirDiğerAlanlarıDoldur() throws InterruptedException {
         us07Page.titleTextBox.sendKeys("Mustakil bahceli Ev");
         us07Page.descriptionTextBox.sendKeys("Mustakil bahceli, merkezi isitma ve klimali ev");
@@ -320,14 +338,14 @@ public class US07_Stepdefs {
 
     }
 
-    @And("Price alani bos birakildiginda uyari mesaji gorulur")
+    @And("Price alani bos birakildiginda uyari mesaji gorulur.")
     public void priceAlaniBosBirakildigindaUyariMesajiGorulur() {
         verifyElementDisplayed(us07Page.alertPrice);
         verifyExpectedAndActualTextMatch("Price must be positive", us07Page.alertPrice);
 
     }
 
-    @Then("Advert Type alanını boş bırak, diğer alanları doldur.")
+    @Then("Advert Type alanını boş bırak, diğer alanları doldur..")
     public void advertTypeAlanınıBoşBırakDiğerAlanlarıDoldur() throws InterruptedException {
         us07Page.titleTextBox.sendKeys("Mustakil bahceli Ev");
         us07Page.descriptionTextBox.sendKeys("Mustakil bahceli, merkezi isitma ve klimali ev");
@@ -369,14 +387,14 @@ public class US07_Stepdefs {
 
     }
 
-    @And("Advert Type alani bos birakildiginda uyari mesaji gorulur")
+    @And("Advert Type alani bos birakildiginda uyari mesaji gorulur.")
     public void advertTypeAlaniBosBirakildigindaUyariMesajiGorulur() {
         verifyElementDisplayed(us07Page.alertAdvertType);
         verifyExpectedAndActualTextMatch("Advert Type must be selected", us07Page.alertAdvertType);
 
     }
 
-    @When("Country alanı bos birakilir")
+    @When("Country alanı bos birakilir.")
     public void countryAlanıBosBirakilir() throws InterruptedException {
         us07Page.titleTextBox.sendKeys("Mustakil bahceli Ev");
         us07Page.descriptionTextBox.sendKeys("Mustakil bahceli, merkezi isitma ve klimali ev");
@@ -413,13 +431,13 @@ public class US07_Stepdefs {
         reusableMethods.uploadFile(pathOfFile1);
     }
 
-    @Then("Country alani bos birakildiginda uyari mesaji gorulur")
+    @Then("Country alani bos birakildiginda uyari mesaji gorulur.")
     public void countryAlaniBosBirakildigindaUyariMesajiGorulur() {
         verifyElementDisplayed(us07Page.alertCountry);
         Driver.closeDriver();
     }
 
-    @When("Size alani bos birakilmali")
+    @When("Size alani bos birakilmali.")
     public void sizeAlaniBosBirakilmali() throws InterruptedException {
         us07Page.titleTextBox.sendKeys("Mustakil bahceli Ev");
         us07Page.descriptionTextBox.sendKeys("Mustakil bahceli, merkezi isitma ve klimali ev");
@@ -461,11 +479,11 @@ public class US07_Stepdefs {
         String pathOfFile1 = System.getProperty("user.dir") + "\\src\\test\\resources\\testdata\\house.jpg\\";
         reusableMethods.uploadFile(pathOfFile1);
     }
-    @Then("Size alani bos birakildiginda uyari mesaji gorulur")
+    @Then("Size alani bos birakildiginda uyari mesaji gorulur.")
     public void sizeAlaniBosBirakildigindaUyariMesajiGorulur() {
         verifyElementDisplayed(us07Page.alertSize);
     }
-    @When("Bedrooms alanı negatif girildi")
+    @When("Bedrooms alanı negatif girildi.")
     public void bedroomsAlanıNegatifGirildi() throws InterruptedException {
         us07Page.titleTextBox.sendKeys("Mustakil bahceli Ev");
         us07Page.descriptionTextBox.sendKeys("Mustakil bahceli, merkezi isitma ve klimali ev");
@@ -507,11 +525,11 @@ public class US07_Stepdefs {
         String pathOfFile1 = System.getProperty("user.dir") + "\\src\\test\\resources\\testdata\\house.jpg\\";
         reusableMethods.uploadFile(pathOfFile1);
     }
-    @Then("Bedrooms alani negatif girildiginda uyari mesaji gorulur")
+    @Then("Bedrooms alani negatif girildiginda uyari mesaji gorulur.")
     public void bedroomsAlaniNegatifGirildigindaUyariMesajiGorulur() {
         verifyElementDisplayed(us07Page.alertBedroom);
     }
-    @When("Year of build alani bos birakilmali")
+    @When("Year of build alani bos birakilmali.")
     public void yearOfBuildAlaniBosBirakilmali() throws InterruptedException {
         us07Page.titleTextBox.sendKeys("Mustakil bahceli Ev");
         us07Page.descriptionTextBox.sendKeys("Mustakil bahceli, merkezi isitma ve klimali ev");
@@ -553,9 +571,14 @@ public class US07_Stepdefs {
         String pathOfFile1 = System.getProperty("user.dir") + "\\src\\test\\resources\\testdata\\house.jpg\\";
         reusableMethods.uploadFile(pathOfFile1);
     }
-    @Then("Year of build alani bos birakildiginda uyari mesaji gorulur")
+    @Then("Year of build alani bos birakildiginda uyari mesaji gorulur.")
     public void yearOfBuildAlaniBosBirakildigindaUyariMesajiGorulur() {
         verifyElementDisplayed(us07Page.alertYearOfBuild);
 
 }
+
+    @Given("Back to site linkine tıklanır")
+    public void backToSiteLinkineTıklanır() {
+        us07Page.backToSiteButton.click();
+    }
 }
