@@ -150,9 +150,8 @@ public class ReusableMethods {
      * Bu method verilen weblementin ekran görüntüsünü alir ve rapora ekler
      *
      * @param webelement
-     * @param customerisim
      */
-    public static void takeScreenShotOfWebElement(WebElement webelement, WebElement customerisim) {
+    public static void takeScreenShotOfWebElement(WebElement webelement) {
         try {
             Files.createDirectories(Paths.get("testOutputs"));
             String date = DateTimeFormatter.ofPattern("ddMMyyyy_HHmmss").format(LocalDateTime.now());
@@ -174,7 +173,6 @@ public class ReusableMethods {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-
     }
 
     public ReusableMethods(){
@@ -199,5 +197,10 @@ public class ReusableMethods {
         }
     }
 
+    public static void AssertGetValue(WebElement webElement, String expected) {
 
+        String actualValue = webElement.getAttribute("value");
+        System.out.printf(actualValue);
+        Assert.assertTrue(actualValue.equals(expected));
+    }
 }
