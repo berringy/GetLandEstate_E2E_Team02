@@ -23,6 +23,7 @@ public class US01TC12Stepdefs {
     public void clickTheEmailField() {
         getlandEstateRegisterPage.email.click();
         ReusableMethods.takeScreenShot();
+        ReusableMethods.addScreenShotToReport();
 
     }
 

@@ -2,7 +2,6 @@ package getland.stepdefs.ui_stepdefs.us16_stepdefs;
 
 import getland.pages.US16Page;
 import getland.utilities.ReusableMethods;
-import getland.utilities.WaitUtils;
 import io.cucumber.java.en.When;
 
 public class US16StepDef {

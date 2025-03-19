@@ -11,19 +11,10 @@ import org.junit.runner.RunWith;
                 "json:target/json-reports/cucumber.json",
                 "junit:target/xml-report/cucumber.xml"
         },
-<<<<<<<< HEAD:src/test/java/getland/runners/Runner_US05.java
-        features = "src/test/resources/features/ui_features/us05.feature",
-        glue = "getland/stepdefs/ui_stepdefs/US05_stepdefs",
-        tags = "@US05",
-        dryRun = false
-)
-public class Runner_US05 {
-========
         features = "src/test/resources/ui_feautures",
         glue = {"getland/stepdefs/ui_stepdefs"},
         tags = "@US03",
         dryRun = false
 )
 public class US03Runner {
->>>>>>>> master:src/test/java/getland/runners/US03Runner.java
 }
