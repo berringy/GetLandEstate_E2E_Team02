@@ -1,4 +1,4 @@
-package getland.stepdefs.ui_stepdefs;
+package getland.stepdefs.ui_stepdefs.us06_stepdefs;
 
 import getland.pages.US06_Page;
 import getland.utilities.*;
@@ -7,9 +7,6 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.OutputType;
-
-import java.io.File;
 
 import static getland.utilities.BrowserUtils.*;
 
