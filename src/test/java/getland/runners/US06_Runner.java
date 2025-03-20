@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "src/test/resources/features",
-        glue = {"getland/stepdefs/ui_stepdefs", "getland/hooks"}, // Hooks burada ekli
+        glue = {"getland/stepdefs/ui_stepdefs/us06_stepdefs", "getland/hooks"}, // Hooks burada ekli
         plugin = {
                 "pretty",
                 "html:target/cucumber-reports.html",
