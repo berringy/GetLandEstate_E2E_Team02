@@ -4,23 +4,12 @@
     <mappings />
     <preferences />
   </component>
-  <component name="DBNavigator.Project.DataEditorManager">
-    <record-view-column-sorting-type value="BY_INDEX" />
-    <value-preview-text-wrapping value="false" />
-    <value-preview-pinned value="false" />
-  </component>
   <component name="DBNavigator.Project.DatabaseAssistantManager">
     <assistants>
       <assistant-state connection-id="dc0c91d1-c90b-4f4f-9bc5-aa8370991228" default-profile-name="" selected-profile-name="" selected-model-name="" assistant-type="GENERIC" selected-action="SHOW_SQL" availability="UNAVAILABLE" acknowledgement="NONE">
         <messages />
       </assistant-state>
     </assistants>
-  </component>
-  <component name="DBNavigator.Project.DatabaseBrowserManager">
-    <autoscroll-to-editor value="false" />
-    <autoscroll-from-editor value="true" />
-    <show-object-properties value="true" />
-    <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="dc0c91d1-c90b-4f4f-9bc5-aa8370991228">
@@ -37,21 +26,8 @@ FROM information_schema.columns
 WHERE table_name = 'confirmation_token';]]></console>
     </connection>
   </component>
-  <component name="DBNavigator.Project.DatabaseEditorStateManager">
-    <last-used-providers />
-  </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files />
-  </component>
-  <component name="DBNavigator.Project.DatabaseSessionManager">
-    <connection id="dc0c91d1-c90b-4f4f-9bc5-aa8370991228" />
-  </component>
-  <component name="DBNavigator.Project.DatasetFilterManager">
-    <filter-actions connection-id="dc0c91d1-c90b-4f4f-9bc5-aa8370991228" dataset="public.confirmation_token" active-filter-id="EMPTY_FILTER" />
-    <filter-actions connection-id="dc0c91d1-c90b-4f4f-9bc5-aa8370991228" dataset="public.logs" active-filter-id="EMPTY_FILTER" />
-  </component>
-  <component name="DBNavigator.Project.ExecutionManager">
-    <retain-sticky-names value="false" />
   </component>
   <component name="DBNavigator.Project.ObjectQuickFilterManager">
     <last-used-operator value="EQUAL" />
@@ -573,9 +549,5 @@ WHERE table_name = 'confirmation_token';]]></console>
         </visibility-settings>
       </environment>
     </general-settings>
-  </component>
-  <component name="DBNavigator.Project.StatementExecutionManager">
-    <execution-variables />
-    <execution-variable-types />
   </component>
 </project>
