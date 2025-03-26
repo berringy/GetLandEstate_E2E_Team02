@@ -19,9 +19,11 @@ public class HookUS_01 {
      icin özellestirdik
      */
 
-    @After("@UIUS01")
+    @After()
     public void tearDown() {
         Driver.closeDriver();
     }
+
+
 
 }
