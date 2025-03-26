@@ -11,14 +11,10 @@
   </component>
   <component name="DBNavigator.Project.DatabaseAssistantManager">
     <assistants>
-<<<<<<< HEAD
-      <assistant-state connection-id="dc0c91d1-c90b-4f4f-9bc5-aa8370991228" default-profile-name="" selected-profile-name="" selected-model-name="" assistant-type="GENERIC" selected-action="SHOW_SQL" availability="UNAVAILABLE" acknowledgement="NONE">
-=======
-      <assistant-state connection-id="7b836302-e642-4283-bfd8-e107294dbe5b" default-profile-name="" selected-profile-name="" selected-model-name="" assistant-type="GENERIC" selected-action="SHOW_SQL" availability="UNAVAILABLE" acknowledgement="NONE">
+      <assistant-state connection-id="effab6f8-2450-4a7e-a6d2-3a1c56c3d792" default-profile-name="" selected-profile-name="" selected-model-name="" assistant-type="GENERIC" selected-action="SHOW_SQL" availability="UNAVAILABLE" acknowledgement="NONE">
         <messages />
       </assistant-state>
       <assistant-state connection-id="249285f4-dd34-4f73-9411-7a21965d4781" default-profile-name="" selected-profile-name="" selected-model-name="" assistant-type="GENERIC" selected-action="SHOW_SQL" availability="UNAVAILABLE" acknowledgement="NONE">
->>>>>>> 30a489d737dedca17828ebabb9318d462cb34ab9
         <messages />
       </assistant-state>
     </assistants>
@@ -26,75 +22,44 @@
   <component name="DBNavigator.Project.DatabaseBrowserManager">
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
-<<<<<<< HEAD
-    <show-object-properties value="true" />
-    <loaded-nodes />
-  </component>
-  <component name="DBNavigator.Project.DatabaseConsoleManager">
-    <connection id="dc0c91d1-c90b-4f4f-9bc5-aa8370991228">
-      <console name="Connection" type="STANDARD" schema="public" session="Main"><![CDATA[SELECT column_name
-FROM information_schema.columns
-WHERE table_name = 'logs';
-
-SELECT EXISTS ( SELECT 1  FROM information_schema.tables WHERE table_name = 'logs');
-
-SELECT EXISTS ( SELECT 1  FROM information_schema.tables WHERE table_name = 'confirmation_token');
-
-SELECT column_name
-FROM information_schema.columns
-WHERE table_name = 'confirmation_token';]]></console>
-=======
     <show-object-properties value="false" />
     <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
-    <connection id="7b836302-e642-4283-bfd8-e107294dbe5b">
-      <console name="Connection" type="STANDARD" schema="public" session="Main"><![CDATA[Select * from category_property_values
+    <connection id="effab6f8-2450-4a7e-a6d2-3a1c56c3d792">
+      <console name="Connection_Property" type="STANDARD" schema="public" session="Main"><![CDATA[select * from advert_types
 
-SELECT COLUMN_NAME 
-FROM INFORMATION_SCHEMA.COLUMNS 
-WHERE TABLE_NAME = 'category_property_values';
+select column_name from information_schema.columns
+where table_name='advert_types'
+AND column_name in ('id','built_in','title')
 
-SELECT COLUMN_NAME, DATA_TYPE
-FROM INFORMATION_SCHEMA.COLUMNS
-WHERE TABLE_NAME = 'category_property_values';
+select * from countries
 
-SELECT * FROM category_property_values LIMIT 10;
+select column_name from information_schema.columns
+where table_name='countries'
+and column_name in('id','lat','lng','name')
 
-SELECT * 
-FROM category_property_values 
-WHERE id IS NULL 
-   OR advert_id IS NULL 
-   OR category_property_key_id IS NULL 
-   OR value IS NULL;
+select * from adverts
 
-SELECT column_name FROM information_schema.columns WHERE table_name = 'category_property_values'
-
-SELECT * FROM category_property_values
-
-SELECT * FROM category_property_values ORDER BY id DESC LIMIT 1]]></console>
->>>>>>> 30a489d737dedca17828ebabb9318d462cb34ab9
+select price from adverts LIMIT 10]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">
     <last-used-providers />
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files />
+    <open-files>
+      <object connection-id="effab6f8-2450-4a7e-a6d2-3a1c56c3d792" object-ref="consoles/Connection_Property" />
+    </open-files>
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
-<<<<<<< HEAD
-    <connection id="dc0c91d1-c90b-4f4f-9bc5-aa8370991228" />
-  </component>
-  <component name="DBNavigator.Project.DatasetFilterManager">
-    <filter-actions connection-id="dc0c91d1-c90b-4f4f-9bc5-aa8370991228" dataset="public.confirmation_token" active-filter-id="EMPTY_FILTER" />
-    <filter-actions connection-id="dc0c91d1-c90b-4f4f-9bc5-aa8370991228" dataset="public.logs" active-filter-id="EMPTY_FILTER" />
-=======
-    <connection id="7b836302-e642-4283-bfd8-e107294dbe5b" />
+    <connection id="effab6f8-2450-4a7e-a6d2-3a1c56c3d792" />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
     <filter-actions connection-id="249285f4-dd34-4f73-9411-7a21965d4781" dataset="public.advert_types" active-filter-id="" />
->>>>>>> 30a489d737dedca17828ebabb9318d462cb34ab9
+  </component>
+  <component name="DBNavigator.Project.ExecutionManager">
+    <retain-sticky-names value="false" />
   </component>
   <component name="DBNavigator.Project.ExecutionManager">
     <retain-sticky-names value="false" />
@@ -105,13 +70,9 @@ SELECT * FROM category_property_values ORDER BY id DESC LIMIT 1]]></console>
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
-<<<<<<< HEAD
-      <connection id="dc0c91d1-c90b-4f4f-9bc5-aa8370991228" active="true" signed="true">
-=======
-      <connection id="7b836302-e642-4283-bfd8-e107294dbe5b" active="true" signed="true">
->>>>>>> 30a489d737dedca17828ebabb9318d462cb34ab9
+      <connection id="effab6f8-2450-4a7e-a6d2-3a1c56c3d792" active="true" signed="true">
         <database>
-          <name value="Connection" />
+          <name value="Connection_Property" />
           <description value="" />
           <database-type value="POSTGRES" />
           <config-type value="BASIC" />
