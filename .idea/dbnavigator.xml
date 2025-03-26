@@ -11,10 +11,14 @@
   </component>
   <component name="DBNavigator.Project.DatabaseAssistantManager">
     <assistants>
+<<<<<<< HEAD
+      <assistant-state connection-id="dc0c91d1-c90b-4f4f-9bc5-aa8370991228" default-profile-name="" selected-profile-name="" selected-model-name="" assistant-type="GENERIC" selected-action="SHOW_SQL" availability="UNAVAILABLE" acknowledgement="NONE">
+=======
       <assistant-state connection-id="7b836302-e642-4283-bfd8-e107294dbe5b" default-profile-name="" selected-profile-name="" selected-model-name="" assistant-type="GENERIC" selected-action="SHOW_SQL" availability="UNAVAILABLE" acknowledgement="NONE">
         <messages />
       </assistant-state>
       <assistant-state connection-id="249285f4-dd34-4f73-9411-7a21965d4781" default-profile-name="" selected-profile-name="" selected-model-name="" assistant-type="GENERIC" selected-action="SHOW_SQL" availability="UNAVAILABLE" acknowledgement="NONE">
+>>>>>>> 30a489d737dedca17828ebabb9318d462cb34ab9
         <messages />
       </assistant-state>
     </assistants>
@@ -22,6 +26,24 @@
   <component name="DBNavigator.Project.DatabaseBrowserManager">
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
+<<<<<<< HEAD
+    <show-object-properties value="true" />
+    <loaded-nodes />
+  </component>
+  <component name="DBNavigator.Project.DatabaseConsoleManager">
+    <connection id="dc0c91d1-c90b-4f4f-9bc5-aa8370991228">
+      <console name="Connection" type="STANDARD" schema="public" session="Main"><![CDATA[SELECT column_name
+FROM information_schema.columns
+WHERE table_name = 'logs';
+
+SELECT EXISTS ( SELECT 1  FROM information_schema.tables WHERE table_name = 'logs');
+
+SELECT EXISTS ( SELECT 1  FROM information_schema.tables WHERE table_name = 'confirmation_token');
+
+SELECT column_name
+FROM information_schema.columns
+WHERE table_name = 'confirmation_token';]]></console>
+=======
     <show-object-properties value="false" />
     <loaded-nodes />
   </component>
@@ -51,6 +73,7 @@ SELECT column_name FROM information_schema.columns WHERE table_name = 'category_
 SELECT * FROM category_property_values
 
 SELECT * FROM category_property_values ORDER BY id DESC LIMIT 1]]></console>
+>>>>>>> 30a489d737dedca17828ebabb9318d462cb34ab9
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">
@@ -60,10 +83,18 @@ SELECT * FROM category_property_values ORDER BY id DESC LIMIT 1]]></console>
     <open-files />
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
+<<<<<<< HEAD
+    <connection id="dc0c91d1-c90b-4f4f-9bc5-aa8370991228" />
+  </component>
+  <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="dc0c91d1-c90b-4f4f-9bc5-aa8370991228" dataset="public.confirmation_token" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="dc0c91d1-c90b-4f4f-9bc5-aa8370991228" dataset="public.logs" active-filter-id="EMPTY_FILTER" />
+=======
     <connection id="7b836302-e642-4283-bfd8-e107294dbe5b" />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
     <filter-actions connection-id="249285f4-dd34-4f73-9411-7a21965d4781" dataset="public.advert_types" active-filter-id="" />
+>>>>>>> 30a489d737dedca17828ebabb9318d462cb34ab9
   </component>
   <component name="DBNavigator.Project.ExecutionManager">
     <retain-sticky-names value="false" />
@@ -74,7 +105,11 @@ SELECT * FROM category_property_values ORDER BY id DESC LIMIT 1]]></console>
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
+<<<<<<< HEAD
+      <connection id="dc0c91d1-c90b-4f4f-9bc5-aa8370991228" active="true" signed="true">
+=======
       <connection id="7b836302-e642-4283-bfd8-e107294dbe5b" active="true" signed="true">
+>>>>>>> 30a489d737dedca17828ebabb9318d462cb34ab9
         <database>
           <name value="Connection" />
           <description value="" />
