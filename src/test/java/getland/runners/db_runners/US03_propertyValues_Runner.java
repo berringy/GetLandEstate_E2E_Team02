@@ -1,4 +1,4 @@
-package getland.runners;
+package getland.runners.db_runners;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
@@ -11,10 +11,10 @@ import org.junit.runner.RunWith;
                 "json:target/json-reports/cucumber.json",
                 "junit:target/xml-report/cucumber.xml"
         },
-        features = "src/test/resources/features/ui_features/us05.feature",
-        glue = "getland/stepdefs/ui_stepdefs/US05_stepdefs",
-        tags = "@US05",
+        features = "src/test/resources/features/db_features/",
+        glue = {"getland/stepdefs/db_stepdefs"},
+        tags = "@DB_US003",
         dryRun = false
 )
-public class Runner_US05 {
+public class US03_propertyValues_Runner {
 }
