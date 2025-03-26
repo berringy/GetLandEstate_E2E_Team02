@@ -1,4 +1,4 @@
-package getland.pojos;
+package getland.pojos.tour_requests_controller;
 
 import java.io.Serializable;
 
