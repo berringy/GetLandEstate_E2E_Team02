@@ -1,4 +1,4 @@
-package getland.stepdefs.api_stepdefs;
+package getland.stepdefs.api_stepdefs.us07_stepdefs;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -8,7 +8,7 @@ import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
-import utilities.ConfigReader;
+import getland.utilities.ConfigReader;
 
 import java.io.File;
 import java.io.FileOutputStream;

@@ -1,4 +1,4 @@
-package getland.stepdefs.api_stepdefs;
+package getland.stepdefs.api_stepdefs.us01_stepdefs;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -8,12 +8,12 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.junit.Assert;
-import pojos.TourDatePojo;
-import pojos.TourTimePojo;
-import utilities.ConfigReader;
+import getland.pojos.tour_requests_controller.TourDatePojo;
+import getland.pojos.tour_requests_controller.TourTimePojo;
+import getland.utilities.ConfigReader;
 
 import static io.restassured.RestAssured.given;
-import static stepDefs.US07_API_ReportController_Stepdefs.getAuthToken;
+import static getland.stepdefs.api_stepdefs.us07_stepdefs.US07_API_ReportController_Stepdefs.getAuthToken;
 
 /* {
   "tourDate": "2025-03-29",
