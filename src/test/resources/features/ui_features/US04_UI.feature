@@ -41,7 +41,7 @@ And Sayfanin DiliTürkçe olmalı
   Then Şartlar ve Koşullar bağlantısına tıkla
   When Sayfa dilini kontrol et dil ispanyolca olmali
   And Sayfa İspanyolca olmalı
-@001
+
   Scenario:TC07 Gizlilik Politikası sayfasının Admin girisi ile dil desteği
   Given Ana sayfayı aç
     Given Dil menüsünü aç ve Almanca'yı seç
