@@ -1,4 +1,4 @@
-package getland.stepdefs.ui_stepdefs;
+package getland.stepdefs.ui_stepdefs.us06_stepdefs;
 
 import getland.pages.US06_Page;
 import getland.utilities.*;
@@ -7,9 +7,6 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.OutputType;
-
-import java.io.File;
 
 import static getland.utilities.BrowserUtils.*;
 
@@ -69,7 +66,7 @@ US06_Page us06Page = new US06_Page();
         dropdownSelectByVisibleText(us06Page.flatt7Dropdown, "Yes");
         us06Page.imageClick.click();
 
-        String pathOfFile1 = System.getProperty("user.dir")+"\\src\\test\\resources\\testdata\\Ev.jpg\\";
+        String pathOfFile1 = System.getProperty("user.dir")+"\\src\\test\\resources\\testdata\\Ev1.jpg\\";
         reusableMethods.uploadFile(pathOfFile1);
 
     }
@@ -113,7 +110,7 @@ US06_Page us06Page = new US06_Page();
         dropdownSelectByVisibleText(us06Page.flatt7Dropdown, "Yes");
         us06Page.imageClick.click();
 
-        String pathOfFile1 = System.getProperty("user.dir")+"\\src\\test\\resources\\testdata\\Ev.jpg\\";
+        String pathOfFile1 = System.getProperty("user.dir")+"\\src\\test\\resources\\testdata\\Ev1.jpg\\";
         reusableMethods.uploadFile(pathOfFile1);
 
     }
@@ -157,7 +154,7 @@ US06_Page us06Page = new US06_Page();
         dropdownSelectByVisibleText(us06Page.flatt7Dropdown, "Yes");
         us06Page.imageClick.click();
 
-        String pathOfFile1 = System.getProperty("user.dir")+"\\src\\test\\resources\\testdata\\Ev.jpg\\";
+        String pathOfFile1 = System.getProperty("user.dir")+"\\src\\test\\resources\\testdata\\Ev1.jpg\\";
         reusableMethods.uploadFile(pathOfFile1);
 
 
@@ -201,7 +198,7 @@ US06_Page us06Page = new US06_Page();
         dropdownSelectByVisibleText(us06Page.flatt7Dropdown, "Yes");
         us06Page.imageClick.click();
 
-        String pathOfFile1 = System.getProperty("user.dir")+"\\src\\test\\resources\\testdata\\Ev.jpg\\";
+        String pathOfFile1 = System.getProperty("user.dir")+"\\src\\test\\resources\\testdata\\Ev1.jpg\\";
         reusableMethods.uploadFile(pathOfFile1);
     }
 
@@ -242,7 +239,8 @@ US06_Page us06Page = new US06_Page();
         us06Page.titleTextBox.sendKeys("Mustakil bahceli ev");
         us06Page.descriptionTextBox.sendKeys("Mustakil bahceli baglar mevkisinde doga ile ic ice klimali merkezi isitmali ev");
         us06Page.priceTextBox.sendKeys("100000");
-        dropdownSelectByVisibleText(us06Page.advertTypeDropdown, "Rent");        us06Page.categoryDropdown.click();
+        dropdownSelectByVisibleText(us06Page.advertTypeDropdown, "Rent");
+        us06Page.categoryDropdown.click();
         us06Page.addressTextBox.click();
         us06Page.sizeTextBox.sendKeys("180");
         us06Page.bedroomTextBox.sendKeys("2");
@@ -264,7 +262,7 @@ US06_Page us06Page = new US06_Page();
         dropdownSelectByVisibleText(us06Page.flatt7Dropdown, "Yes");
         us06Page.imageClick.click();
 
-        String pathOfFile1 = System.getProperty("user.dir")+"\\src\\test\\resources\\testdata\\Ev.jpg\\";
+        String pathOfFile1 = System.getProperty("user.dir")+"\\src\\test\\resources\\testdata\\Ev1.jpg\\";
         reusableMethods.uploadFile(pathOfFile1);
     }
 
@@ -305,7 +303,7 @@ US06_Page us06Page = new US06_Page();
         dropdownSelectByVisibleText(us06Page.flatt6Dropdown, "Yes");
         dropdownSelectByVisibleText(us06Page.flatt7Dropdown, "Yes");
         us06Page.imageClick.click();
-        String pathOfFile1 = System.getProperty("user.dir")+"\\src\\test\\resources\\testdata\\Ev.jpg\\";
+        String pathOfFile1 = System.getProperty("user.dir")+"\\src\\test\\resources\\testdata\\Ev1.jpg\\";
         reusableMethods.uploadFile(pathOfFile1);
     }
 
@@ -371,7 +369,7 @@ US06_Page us06Page = new US06_Page();
         dropdownSelectByVisibleText(us06Page.flatt6Dropdown, "Yes");
         dropdownSelectByVisibleText(us06Page.flatt7Dropdown, "Yes");
         us06Page.imageClick.click();
-        String pathOfFile1 = System.getProperty("user.dir")+"\\src\\test\\resources\\testdata\\Ev.jpg\\";
+        String pathOfFile1 = System.getProperty("user.dir")+"\\src\\test\\resources\\testdata\\Ev1.jpg\\";
         reusableMethods.uploadFile(pathOfFile1);
     }
 
@@ -413,7 +411,7 @@ US06_Page us06Page = new US06_Page();
         dropdownSelectByVisibleText(us06Page.flatt6Dropdown, "Yes");
         dropdownSelectByVisibleText(us06Page.flatt7Dropdown, "Yes");
         us06Page.imageClick.click();
-        String pathOfFile1 = System.getProperty("user.dir")+"\\src\\test\\resources\\testdata\\Ev.jpg\\";
+        String pathOfFile1 = System.getProperty("user.dir")+"\\src\\test\\resources\\testdata\\Ev1.jpg\\";
         reusableMethods.uploadFile(pathOfFile1);
     }
 
@@ -454,7 +452,7 @@ US06_Page us06Page = new US06_Page();
         dropdownSelectByVisibleText(us06Page.flatt6Dropdown, "Yes");
         dropdownSelectByVisibleText(us06Page.flatt7Dropdown, "Yes");
         us06Page.imageClick.click();
-        String pathOfFile1 = System.getProperty("user.dir")+"\\src\\test\\resources\\testdata\\Ev.jpg\\";
+        String pathOfFile1 = System.getProperty("user.dir")+"\\src\\test\\resources\\testdata\\Ev1.jpg\\";
         reusableMethods.uploadFile(pathOfFile1);
     }
 
@@ -495,7 +493,7 @@ US06_Page us06Page = new US06_Page();
         dropdownSelectByVisibleText(us06Page.flatt6Dropdown, "Yes");
         dropdownSelectByVisibleText(us06Page.flatt7Dropdown, "Yes");
         us06Page.imageClick.click();
-        String pathOfFile1 = System.getProperty("user.dir")+"\\src\\test\\resources\\testdata\\Ev.jpg\\";
+        String pathOfFile1 = System.getProperty("user.dir")+"\\src\\test\\resources\\testdata\\Ev1.jpg\\";
         reusableMethods.uploadFile(pathOfFile1);
     }
 
@@ -536,7 +534,7 @@ US06_Page us06Page = new US06_Page();
         dropdownSelectByVisibleText(us06Page.flatt6Dropdown, "Yes");
         dropdownSelectByVisibleText(us06Page.flatt7Dropdown, "Yes");
         us06Page.imageClick.click();
-        String pathOfFile1 = System.getProperty("user.dir")+"\\src\\test\\resources\\testdata\\Ev.jpg\\";
+        String pathOfFile1 = System.getProperty("user.dir")+"\\src\\test\\resources\\testdata\\Ev1.jpg\\";
         reusableMethods.uploadFile(pathOfFile1);
     }
 
@@ -580,7 +578,7 @@ US06_Page us06Page = new US06_Page();
         dropdownSelectByVisibleText(us06Page.flatt6Dropdown, "Yes");
         dropdownSelectByVisibleText(us06Page.flatt7Dropdown, "Yes");
         us06Page.imageClick.click();
-        String pathOfFile1 = System.getProperty("user.dir")+"\\src\\test\\resources\\testdata\\Ev.jpg\\";
+        String pathOfFile1 = System.getProperty("user.dir")+"\\src\\test\\resources\\testdata\\Ev1.jpg\\";
         reusableMethods.uploadFile(pathOfFile1);
     }
 
@@ -620,7 +618,7 @@ US06_Page us06Page = new US06_Page();
         dropdownSelectByVisibleText(us06Page.flatt6Dropdown, "Yes");
         dropdownSelectByVisibleText(us06Page.flatt7Dropdown, "Yes");
         us06Page.imageClick.click();
-        String pathOfFile1 = System.getProperty("user.dir")+"\\src\\test\\resources\\testdata\\Ev.jpg\\";
+        String pathOfFile1 = System.getProperty("user.dir")+"\\src\\test\\resources\\testdata\\Ev1.jpg\\";
         reusableMethods.uploadFile(pathOfFile1);
     }
 
@@ -664,7 +662,7 @@ US06_Page us06Page = new US06_Page();
         dropdownSelectByVisibleText(us06Page.flatt6Dropdown, "Yes");
         dropdownSelectByVisibleText(us06Page.flatt7Dropdown, "Yes");
         us06Page.imageClick.click();
-        String pathOfFile1 = System.getProperty("user.dir")+"\\src\\test\\resources\\testdata\\Ev.jpg\\";
+        String pathOfFile1 = System.getProperty("user.dir")+"\\src\\test\\resources\\testdata\\Ev1.jpg\\";
         reusableMethods.uploadFile(pathOfFile1);
     }
 
@@ -708,7 +706,7 @@ US06_Page us06Page = new US06_Page();
         dropdownSelectByVisibleText(us06Page.flatt6Dropdown, "Yes");
         dropdownSelectByVisibleText(us06Page.flatt7Dropdown, "Yes");
         us06Page.imageClick.click();
-        String pathOfFile1 = System.getProperty("user.dir")+"\\src\\test\\resources\\testdata\\Ev.jpg\\";
+        String pathOfFile1 = System.getProperty("user.dir")+"\\src\\test\\resources\\testdata\\Ev1.jpg\\";
         reusableMethods.uploadFile(pathOfFile1);
     }
 
@@ -769,7 +767,7 @@ US06_Page us06Page = new US06_Page();
 
     @When("Geçerli bir resim yüklendi")
     public void geçerliBirResimYüklendi() {
-        String pathOfFile1 = System.getProperty("user.dir")+"\\src\\test\\resources\\testdata\\Ev.jpg\\";
+        String pathOfFile1 = System.getProperty("user.dir")+"\\src\\test\\resources\\testdata\\Ev1.jpg\\";
         reusableMethods.uploadFile(pathOfFile1);
     }
 
@@ -821,7 +819,7 @@ US06_Page us06Page = new US06_Page();
         ActionsUtils.scrollDown();
         us06Page.imageClick.click();
 
-        String pathOfFile1 = System.getProperty("user.dir")+"\\src\\test\\resources\\testdata\\Ev.jpg\\";
+        String pathOfFile1 = System.getProperty("user.dir")+"\\src\\test\\resources\\testdata\\Ev1.jpg\\";
         reusableMethods.uploadFile(pathOfFile1);
 
         
