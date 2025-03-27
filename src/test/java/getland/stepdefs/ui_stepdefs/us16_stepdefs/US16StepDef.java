@@ -1,10 +1,7 @@
-<<<<<<< HEAD
+
 
 package getland.stepdefs.ui_stepdefs.us16_stepdefs;
 
-=======
-package getland.stepdefs.ui_stepdefs.us16_stepdefs;
->>>>>>> 30a489d737dedca17828ebabb9318d462cb34ab9
 
 import getland.pages.US16Page;
 import getland.utilities.ReusableMethods;
