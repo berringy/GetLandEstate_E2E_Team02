@@ -1,11 +1,10 @@
 
-package getland.stepdefs.ui_stepdefs;
+package getland;
 
 import io.cucumber.java.Before;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
-import getland.utilities.Authentication;
 import getland.utilities.ConfigReader;
 
 public class Hook {
@@ -18,7 +17,7 @@ public class Hook {
      */
     public static RequestSpecification spec;
 
-    @Before("@apie2e")
+    @Before
     public void setUp() throws Exception {
         spec = new RequestSpecBuilder()
                 .setBaseUri(ConfigReader.getProperty("baseUrl"))

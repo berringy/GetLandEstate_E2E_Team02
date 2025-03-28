@@ -1,4 +1,4 @@
-package getland.utilities;
+package getland;
 
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
@@ -10,18 +10,17 @@ public class Authentication {
 
     public static String generateToken(){
 
-        String url ="https://medunna.com/api/authenticate";
+        String url ="http://64.227.123.49:8092/users/login";
 
         String credentials="{\n" +
-                "  \"password\": \"Techpro123.\",\n" +
-                "  \"rememberMe\": true,\n" +
-                "  \"username\": \"techproed\"\n" +
+                "  \"password\": \"123456789tT!\",\n" +
+                "  \"username\": \"samet18@gmail.com\"\n" +
                 "}";
 
 
         Response response = given().body(credentials).contentType(ContentType.JSON).when().post(url);
 
-        return response.jsonPath().getString("id_token");
+        return response.jsonPath().getString("token");
 
     }
 }
