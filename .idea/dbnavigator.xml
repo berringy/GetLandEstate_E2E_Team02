@@ -11,9 +11,15 @@
       </assistant-state>
     </assistants>
   </component>
+  <component name="DBNavigator.Project.DatabaseBrowserManager">
+    <autoscroll-to-editor value="false" />
+    <autoscroll-from-editor value="true" />
+    <show-object-properties value="true" />
+    <loaded-nodes />
+  </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="dc0c91d1-c90b-4f4f-9bc5-aa8370991228">
-      <console name="Connection" type="STANDARD" schema="public" session="Main"><![CDATA[SELECT column_name
+      <console name="Connection" type="STANDARD" schema="public" session="Main">SELECT column_name
 FROM information_schema.columns
 WHERE table_name = 'logs';
 
@@ -23,7 +29,7 @@ SELECT EXISTS ( SELECT 1  FROM information_schema.tables WHERE table_name = 'con
 
 SELECT column_name
 FROM information_schema.columns
-WHERE table_name = 'confirmation_token';]]></console>
+WHERE table_name = 'confirmation_token';</console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">

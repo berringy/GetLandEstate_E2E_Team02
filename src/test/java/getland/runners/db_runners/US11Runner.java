@@ -7,9 +7,9 @@ import org.junit.runner.RunWith;
 @CucumberOptions(//bu notasyon sayesinde hangi scenariolari calistiracagimizi ve hangi raporlari alacagimizi belirtiriz
         plugin = {
                 "pretty",//konsol da scenariolar ile ilgili ayrintili bilgi verir
-                "html:target/default-cucumber-reports.html",
+                "html:target/default-dbus11cucumber-reports.html",
                 "json:target/json-reports/cucumber.json",
-                "junit:target/xml-report/cucumber.xml"
+                "junit:target/xml-report/dbus11cucumber.xml"
         },
         features = "src/test/resources/features/db_features/US11_DB_Logs.feature",
         glue = {"getland/stepdefs/db_stepdefs/us11_stepdefs"},
