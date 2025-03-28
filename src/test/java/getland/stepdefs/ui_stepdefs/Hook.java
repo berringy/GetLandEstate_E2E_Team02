@@ -1,5 +1,5 @@
-package getland.stepdefs;
 
+package getland.stepdefs.ui_stepdefs;
 
 import io.cucumber.java.Before;
 import io.restassured.builder.RequestSpecBuilder;

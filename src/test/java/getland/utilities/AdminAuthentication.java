@@ -22,8 +22,5 @@ public class AdminAuthentication {
 
         return response.jsonPath().getString("token");
     }
-
-
 // "berringyilmaz@gmail.com", "123Tech."
-
 }
