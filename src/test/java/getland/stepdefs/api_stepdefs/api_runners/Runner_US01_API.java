@@ -1,4 +1,4 @@
-package getland.runners.api_runners;
+package getland.stepdefs.api_stepdefs.api_runners;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
@@ -13,10 +13,10 @@ import org.junit.runner.RunWith;
                 "junit:target/xml-reports/cucumber.xml",
         },
         features = "src/test/resources/features/api_features",
-        glue = "getland/stepdefs/api_stepdefs/us07_stepdefs",
-        tags = "@US07API",
+        glue = "getland/stepdefs/api_stepdefs/us01_stepdefs",
+        tags = "@US01API",
         monochrome = false,
         dryRun = false
 )
-public class Runner_US07_API {
+public class Runner_US01_API {
 }

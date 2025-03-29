@@ -1,6 +1,5 @@
 package getland.stepdefs.api_stepdefs.us04_stepdefs;
 
-import getland.pojos.adverttypespojos.AdvertTypesGetPojo;
 import getland.pojos.adverttypespojos.AdvertTypesPutPojo;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -9,7 +8,7 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.junit.Assert;
 
-import static getland.Hook.spec;
+import static getland.stepdefs.api_stepdefs.us04_stepdefs.Hook.spec;
 import static io.restassured.RestAssured.given;
 
 public class US04PutStepdefs {

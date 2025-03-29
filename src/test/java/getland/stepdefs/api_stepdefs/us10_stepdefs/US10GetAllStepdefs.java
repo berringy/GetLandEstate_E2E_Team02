@@ -6,7 +6,7 @@ import io.cucumber.java.en.Then;
 import io.restassured.response.Response;
 import org.junit.Assert;
 
-import static getland.Hook.spec;
+import static getland.stepdefs.api_stepdefs.us04_stepdefs.Hook.spec;
 import static io.restassured.RestAssured.given;
 
 public class US10GetAllStepdefs {

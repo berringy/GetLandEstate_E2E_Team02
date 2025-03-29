@@ -3,13 +3,11 @@ package getland.stepdefs.api_stepdefs.us04_stepdefs;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.junit.Assert;
 
-import static getland.Hook.spec;
+import static getland.stepdefs.api_stepdefs.us04_stepdefs.Hook.spec;
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.*;
 
 public class US04GetAllStepdefs {
 

@@ -1,4 +1,4 @@
-package getland;
+package getland.stepdefs.api_stepdefs.us04_stepdefs;
 
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
