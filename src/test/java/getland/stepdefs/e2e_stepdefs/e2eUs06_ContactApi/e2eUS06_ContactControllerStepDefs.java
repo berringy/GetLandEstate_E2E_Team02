@@ -1,4 +1,4 @@
-package getland.stepdefs.api_stepdefs.us06_stepdefs;
+package getland.stepdefs.e2e_stepdefs.e2eUs06_ContactApi;
 
 import getland.pojos.contact_controller.US06_GetByIdPayload;
 import getland.pojos.contact_controller.US06_PostPayload;
@@ -11,15 +11,14 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.junit.Assert;
 
-
 import java.util.List;
 
-import static getland.stepdefs.api_stepdefs.us06_stepdefs.US06_ApiAdminHook.spec;
+
+import static getland.stepdefs.e2e_stepdefs.e2eUs06_ContactApi.e2eUS06_ApiAdminHook.spec;
 import static io.restassured.RestAssured.given;
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-public class US06_ContactControllerStepDefs {
+public class e2eUS06_ContactControllerStepDefs {
 
     private US06_PostPayload payload;
     Response response;
@@ -30,7 +29,7 @@ public class US06_ContactControllerStepDefs {
 
     @Given("Prepare a new contact message.")
     public void prepareANewContactMessage() {
-     //  spec.baseUri(ConfigReader.getProperty("apiUrl"));
+       //spec.baseUri(ConfigReader.getProperty("apiUrl"));
 
         spec.pathParams("first","contact-messages");
         //Request URI:http://64.227.123.49:8092/contact-messages
