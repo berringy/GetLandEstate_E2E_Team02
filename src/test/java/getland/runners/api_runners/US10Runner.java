@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
         },
         features = "src/test/resources/features/api_features",
         glue = {"getland/stepdefs/api_stepdefs/us10_stepdefs"},
-        tags = "@US04",
+        tags = "@US10",
         dryRun = false
 )
 public class US10Runner {

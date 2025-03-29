@@ -20,7 +20,7 @@ public class Hook {
     @Before
     public void setUp() throws Exception {
         spec = new RequestSpecBuilder()
-                .setBaseUri(ConfigReader.getProperty("baseUrl"))
+                .setBaseUri(ConfigReader.getProperty("baseUrll"))
                 .setContentType(ContentType.JSON)
                 .addHeader("Authorization", "Bearer " + Authentication.generateToken())
                 .build();
