@@ -18,6 +18,6 @@ import org.junit.runner.RunWith;
         tags = "@US17",  // Feature dosyasında senaryolara "@US17" etiketi eklenmeli
         dryRun = false
 )
-public class Runner_US17 {
+public class Runner_US17  {
 
 }
