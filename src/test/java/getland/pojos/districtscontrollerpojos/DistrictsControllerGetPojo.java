@@ -2,7 +2,7 @@ package getland.pojos.districtscontrollerpojos;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-@JsonIgnoreProperties(ignoreUnknown = true)
+
 public class DistrictsControllerGetPojo {
 
     private int id;
