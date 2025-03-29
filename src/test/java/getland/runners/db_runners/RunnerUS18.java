@@ -1,4 +1,5 @@
-package getland.stepdefs.api_stepdefs.api_runners;
+package getland.runners.db_runners;
+
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
@@ -12,11 +13,11 @@ import org.junit.runner.RunWith;
                 "json:target/json-reports/cucumber.json",
                 "junit:target/xml-reports/cucumber.xml",
         },
-        features = "src/test/resources/features/api_features",
-        glue = "getland/stepdefs/api_stepdefs/us07_stepdefs",
-        tags = "@US07API",
+        features = "src/test/resources/features/db_features",
+        glue = "getland/stepdefs/db_stepdefs/us18_stepdefs",
+        tags = "@DB_US18",
         monochrome = false,
         dryRun = false
 )
-public class Runner_US07_API {
+public class RunnerUS18 {
 }

@@ -1,5 +1,8 @@
 package getland.pojos.adverttypespojos;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class AdvertTypesGetPojo {
 
     private int id;
