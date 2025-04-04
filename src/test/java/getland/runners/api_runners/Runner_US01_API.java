@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
                 "junit:target/xml-reports/cucumber.xml",
         },
         features = "src/test/resources/features/api_features",
-        glue = "getland/stepdefs/api_stepdefs/us01_stepdefs",
+        glue = {"getland/stepdefs/api_stepdefs/us01_stepdefs","getland/stepdefs/api_stepdefs/us07_stepdefs"},
         tags = "@US01API",
         monochrome = false,
         dryRun = false
