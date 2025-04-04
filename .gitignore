@@ -42,3 +42,4 @@ configuration.properties
 
 ### pom ###
 pom.xml
+.idea/dbnavigator.xml
