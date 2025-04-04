@@ -6,7 +6,19 @@
   </component>
   <component name="DBNavigator.Project.DatabaseAssistantManager">
     <assistants>
+      <assistant-state connection-id="39389c45-08e7-421a-b769-975d002f86bb" default-profile-name="" selected-profile-name="" selected-model-name="" assistant-type="GENERIC" selected-action="SHOW_SQL" availability="UNAVAILABLE" acknowledgement="NONE">
+        <messages />
+      </assistant-state>
+      <assistant-state connection-id="effab6f8-2450-4a7e-a6d2-3a1c56c3d792" default-profile-name="" selected-profile-name="" selected-model-name="" assistant-type="GENERIC" selected-action="SHOW_SQL" availability="UNAVAILABLE" acknowledgement="NONE">
+        <messages />
+      </assistant-state>
       <assistant-state connection-id="dc0c91d1-c90b-4f4f-9bc5-aa8370991228" default-profile-name="" selected-profile-name="" selected-model-name="" assistant-type="GENERIC" selected-action="SHOW_SQL" availability="UNAVAILABLE" acknowledgement="NONE">
+        <messages />
+      </assistant-state>
+      <assistant-state connection-id="249285f4-dd34-4f73-9411-7a21965d4781" default-profile-name="" selected-profile-name="" selected-model-name="" assistant-type="GENERIC" selected-action="SHOW_SQL" availability="UNAVAILABLE" acknowledgement="NONE">
+        <messages />
+      </assistant-state>
+      <assistant-state connection-id="b4051fa5-0769-4d27-9344-a1691175dca5" default-profile-name="" selected-profile-name="" selected-model-name="" assistant-type="GENERIC" selected-action="SHOW_SQL" availability="UNAVAILABLE" acknowledgement="NONE">
         <messages />
       </assistant-state>
     </assistants>
@@ -19,17 +31,7 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="dc0c91d1-c90b-4f4f-9bc5-aa8370991228">
-      <console name="Connection" type="STANDARD" schema="public" session="Main">SELECT column_name
-FROM information_schema.columns
-WHERE table_name = 'logs';
-
-SELECT EXISTS ( SELECT 1  FROM information_schema.tables WHERE table_name = 'logs');
-
-SELECT EXISTS ( SELECT 1  FROM information_schema.tables WHERE table_name = 'confirmation_token');
-
-SELECT column_name
-FROM information_schema.columns
-WHERE table_name = 'confirmation_token';</console>
+      <console name="Connection" type="STANDARD" schema="prettierhomes" session="Main" />
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">

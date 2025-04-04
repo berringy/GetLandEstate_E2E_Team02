@@ -21,7 +21,6 @@ public class AdminAuthentication {
         Response response = given().body(credentials).contentType(ContentType.JSON).when().post(url);
 
         return response.jsonPath().getString("token");
-
-
     }
+// "berringyilmaz@gmail.com", "123Tech."
 }
