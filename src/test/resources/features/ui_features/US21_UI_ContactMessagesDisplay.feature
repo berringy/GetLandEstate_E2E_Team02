@@ -40,7 +40,7 @@ Feature: Displaying Contact Messages
     When User enters "TEST" into the search box
     And User clicks the filter button
     And User selects start date "11.03.2025"
-    And User selects end date "17.03.2025"
+    And User selects end date "04.04.2025"
     And User selects message status "Okundu"
     And User clicks on the Apply button
     And User clicks the search button
