@@ -16,5 +16,5 @@ import org.junit.runner.RunWith;
         tags = "@DB_US12",
         dryRun = false
 )
-public class Runner_DBUS12 {
+public class Runner_DBUS12   {
 }
